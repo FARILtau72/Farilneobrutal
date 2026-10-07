@@ -1,0 +1,227 @@
+/**
+ * Dark Mode Theme Overrides
+ */
+
+/* ==========================================================================
+   DARK MODE SYSTEM
+   ========================================================================== */
+html.dark {
+  --bg: #0B0F17;
+  --surface: #111827;
+  --surface-alt: #1F2937;
+  --border: #1E293B;
+  --border-strong: #334155;
+  
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-subtle: #64748B;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.4), 0 2px 6px -1px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 16px 32px -4px rgba(0, 0, 0, 0.6), 0 6px 12px -2px rgba(0, 0, 0, 0.3);
+  --shadow-float: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: var(--bg);
+  color: var(--text-main);
+}
+
+html.dark .bg-tech-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+html.dark .bg-dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+html.dark .nav-glass {
+  background: rgba(15, 23, 42, 0.88);
+  border-color: rgba(51, 65, 85, 0.7);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+html.dark .nav-link {
+  color: #94A3B8;
+}
+
+html.dark .nav-link:hover,
+html.dark .nav-link.active {
+  color: #F8FAFC;
+  background-color: rgba(30, 41, 59, 0.8);
+}
+
+html.dark .clean-card {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+html.dark .clean-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-card-hover);
+}
+
+html.dark .tech-card {
+  background: #111827;
+  border-color: #1E293B;
+}
+
+html.dark .tech-card:hover {
+  background: #1E293B;
+  border-color: #38BDF8;
+}
+
+html.dark .tech-icon-wrap {
+  background: #1F2937;
+  border-color: #334155;
+}
+
+html.dark .hero-float-card {
+  background: rgba(15, 23, 42, 0.94);
+  border-color: rgba(51, 65, 85, 0.8);
+  color: #F8FAFC;
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.5);
+}
+
+html.dark .project-showcase {
+  background: #111827;
+  border-color: #1E293B;
+}
+
+html.dark .project-showcase:hover {
+  border-color: #334155;
+}
+
+html.dark .browser-mockup {
+  background: #111827;
+  border-color: #1E293B;
+}
+
+html.dark .browser-header {
+  background: #1E293B;
+  border-color: #334155;
+}
+
+html.dark .browser-url {
+  background: #0B0F17;
+  border-color: #334155;
+  color: #94A3B8;
+}
+
+html.dark .philosophy-section {
+  background: linear-gradient(135deg, #0B0F17 0%, #111827 50%, #1E293B 100%);
+  border-color: #1E293B;
+}
+
+html.dark footer {
+  background-color: #0B0F17 !important;
+  border-color: #1E293B !important;
+}
+
+/* Comprehensive text color adaptation for dark mode */
+html.dark .text-slate-950,
+html.dark .text-slate-900 {
+  color: #F8FAFC !important;
+}
+
+html.dark .text-slate-800 {
+  color: #F1F5F9 !important;
+}
+
+html.dark .text-slate-700 {
+  color: #CBD5E1 !important;
+}
+
+html.dark .text-slate-600 {
+  color: #94A3B8 !important;
+}
+
+html.dark .text-slate-500 {
+  color: #64748B !important;
+}
+
+html.dark .text-slate-400 {
+  color: #94A3B8 !important;
+}
+
+/* Background adaptations */
+html.dark .bg-white {
+  background-color: #111827 !important;
+}
+
+html.dark .bg-slate-50 {
+  background-color: #162032 !important;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #1E293B !important;
+}
+
+html.dark .bg-slate-200 {
+  background-color: #334155 !important;
+}
+
+/* Border adaptations */
+html.dark .border-slate-100,
+html.dark .border-slate-200 {
+  border-color: #1E293B !important;
+}
+
+html.dark .border-slate-300 {
+  border-color: #334155 !important;
+}
+
+/* Highlighting in dark mode */
+html.dark .highlight-blue {
+  color: #60A5FA;
+}
+
+html.dark .highlight-lime {
+  background-color: rgba(163, 230, 53, 0.2);
+  color: #BEF264;
+}
+
+/* Badges in dark mode */
+html.dark .badge-pill {
+  background: #111827;
+  border-color: #1E293B;
+  color: #94A3B8;
+}
+
+html.dark .badge-status {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #34D399;
+}
+
+/* Form inputs & select in dark mode */
+html.dark input,
+html.dark select {
+  background-color: #162032 !important;
+  color: #F8FAFC !important;
+  border-color: #334155 !important;
+}
+
+html.dark input::placeholder {
+  color: #64748B !important;
+}
+
+/* Nav toggle button styles */
+.nav-control-btn {
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-control-btn:hover {
+  transform: translateY(-1px);
+}
+
+.nav-control-btn:active {
+  transform: translateY(0);
+}

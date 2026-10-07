@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faril Putra Pratama · Software Developer & AI Explorer (FARILtau72)</title>
+  
+  <meta name="description" content="Portfolio of Faril Putra Pratama (FARILtau72) — Software Developer, Backend Builder, and AI Explorer based in Bekasi, Indonesia. Building real operational software and AI systems.">
+  <meta name="author" content="Faril Putra Pratama">
+  <meta name="keywords" content="Faril Putra Pratama, FARILtau72, Bekasi, Python Developer, FastAPI, AETERNA AI, PyKasi, SMKS Taruna Bangsa, Backend Developer, Indonesia">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Faril Putra Pratama · Software Developer & AI Explorer">
+  <meta property="og:description" content="Software Developer from Bekasi, Indonesia. Focused on Python, backend engineering, AI systems, and practical digital products.">
+  <meta property="og:url" content="https://farildev.my.id">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#2563EB',
+              sky: '#38BDF8',
+              cyan: '#22D3EE',
+              lime: '#A3E635',
+              yellow: '#FDE047',
+              violet: '#A78BFA'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/theme-dark.css">
+</head>
+<body class="bg-tech-grid text-slate-900 selection:bg-blue-100 selection:text-blue-900">
+
+  <!-- Custom Desktop Cursor -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="custom-cursor-follower" class="custom-cursor-follower"></div>
+
+  <!-- FLOATING NAVBAR -->
+  <header class="nav-floating-container">
+    <nav class="nav-glass flex items-center justify-between">
+      <!-- Left Brand with Avatar -->
+      <a href="#home" class="flex items-center gap-2.5 group">
+        <div class="relative w-8 h-8 rounded-full overflow-hidden border border-slate-200 group-hover:border-blue-500 transition-colors shadow-sm bg-slate-900 flex-shrink-0">
+          <img src="./assets/my.jpg" alt="Faril Dummy Avatar" class="w-full h-full object-cover">
+        </div>
+        <span class="font-extrabold text-lg tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">
+          FARIL<span class="text-blue-600">/</span>
+        </span>
+        <span class="hidden sm:inline-flex items-center gap-1 font-mono text-[11px] text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          faril.dev
+        </span>
+      </a>
+
+      <!-- Center Links (Desktop) -->
+      <div class="hidden md:flex items-center gap-1">
+        <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
+        <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+        <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
+        <a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a>
+        <a href="#achievements" class="nav-link" data-i18n="nav_achievements">Achievements</a>
+      </div>
+
+      <!-- Right Action, Language, Dark Mode & Socials -->
+      <div class="flex items-center gap-1.5 sm:gap-2.5">
+        <!-- Language Switcher Pill -->
+        <button id="lang-toggle-btn" class="nav-control-btn font-mono text-xs font-bold px-2.5 py-1 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-100/90 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:border-blue-500 dark:hover:border-blue-400 transition-all flex items-center gap-1.5 cursor-pointer shadow-xs select-none" title="Switch Language (EN / ID)">
+          <i data-lucide="globe" class="w-3.5 h-3.5 text-blue-600 dark:text-blue-400"></i>
+          <span id="lang-indicator" class="tracking-wider">EN</span>
+        </button>
+
+        <!-- Dark Mode Toggle Button -->
+        <button id="theme-toggle-btn" class="nav-control-btn p-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-100/90 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500 transition-all flex items-center justify-center cursor-pointer shadow-xs select-none" title="Toggle Dark/Light Mode">
+          <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+          <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden"></i>
+        </button>
+
+        <div class="h-4 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
+
+        <a href="https://github.com/FARILtau72" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors p-1" title="GitHub Profile">
+          <i data-lucide="github" class="w-4 h-4"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/faril-putra-pratama-81561a280" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors p-1" title="LinkedIn Profile">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        </a>
+        <a href="mailto:farilpratamap@gmail.com?subject=Hello%20Faril%20-%20Opportunity%20Inquiry" class="bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs sm:text-sm px-3.5 py-1.5 rounded-full shadow-sm hover:shadow transition-all flex items-center gap-1.5 ml-0.5">
+          <span data-i18n="nav_connect">Let's Connect</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-6xl mx-auto px-5 sm:px-8 pt-32 pb-24 space-y-36">
+
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <header id="home" class="relative pt-6 md:pt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Side: Editorial Typography -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Status Pill -->
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-medium shadow-sm">
+            <span class="status-dot"></span>
+            <span data-i18n="hero_status">Available for opportunities</span>
+          </div>
+
+          <!-- Eyebrow Greeting -->
+          <p data-i18n="hero_eyebrow" class="font-mono text-sm uppercase tracking-wider text-slate-500 font-semibold">
+            Hey, I'm Faril.
+          </p>
+
+          <!-- Main Hero Statement -->
+          <h1 data-i18n-html="hero_title" class="hero-title text-slate-950">
+            I build <span class="highlight-blue">software</span>,<br>
+            experiment with <span class="highlight-lime">AI</span>,<br>
+            and occasionally break things to understand how they work.
+          </h1>
+
+          <!-- Supporting Narrative -->
+          <p data-i18n-html="hero_desc" class="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
+            Software Engineering student from Indonesia focused on <strong>Python</strong>, <strong>backend systems</strong>, <strong>web development</strong>, <strong>AI</strong>, and practical digital products.
+          </p>
+
+          <!-- Action CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#projects" class="bg-slate-900 hover:bg-slate-800 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-medium text-sm px-6 py-3 rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-2 group">
+              <span data-i18n="hero_cta_work">Explore my work</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform"></i>
+            </a>
+            <a href="https://github.com/FARILtau72" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-slate-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-100 font-medium text-sm px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow transition-all flex items-center gap-2">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>GitHub</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5 text-slate-400"></i>
+            </a>
+          </div>
+
+          <!-- Subtext Location -->
+          <p data-i18n="hero_location" class="font-mono text-xs text-slate-400 pt-2 flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400"></i>
+            Bekasi, Indonesia · Building since curiosity won.
+          </p>
+
+        </div>
+
+        <!-- Right Side: Clean Structured Developer Console Showcase -->
+        <div class="lg:col-span-5 relative">
+          
+          <!-- Main Showcase Glass Bento Container -->
+          <div class="clean-card p-5 sm:p-6 bg-white/95 backdrop-blur-md border border-slate-200 shadow-xl shadow-slate-200/50 rounded-3xl relative overflow-hidden">
+            
+            <!-- Window Header / Title Bar -->
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                <span class="ml-2 font-mono text-xs text-slate-400 font-semibold">faril.dev // developer_core</span>
+              </div>
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-mono font-bold">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>ONLINE</span>
+              </div>
+            </div>
+
+            <!-- Portrait & 3D Interactive Stage -->
+            <div class="relative w-full h-[330px] sm:h-[360px] rounded-2xl bg-gradient-to-b from-slate-50 via-blue-50/25 to-slate-100/70 border border-slate-200/80 overflow-hidden flex items-end justify-center">
+              
+              <!-- Subtle Technical Background Grid inside card -->
+              <div class="absolute inset-0 bg-tech-grid opacity-50 pointer-events-none"></div>
+
+              <!-- Ambient Glow Behind Photo -->
+              <div class="absolute inset-x-12 top-8 bottom-6 rounded-full bg-gradient-to-tr from-blue-500/20 via-cyan-400/20 to-lime-300/15 blur-2xl pointer-events-none"></div>
+
+              <!-- 3D Canvas Host Layer (Three.js particles & orbiting tech labels) -->
+              <div id="hero-three-container">
+                <div id="three-canvas-host"></div>
+                <!-- Three.js Fallback if WebGL unavailable -->
+                <div id="three-fallback" class="three-fallback hidden absolute inset-0 m-auto"></div>
+              </div>
+
+              <!-- Faril's Portrait Photo (Neat, Centered & Anchored at bottom) -->
+              <div class="hero-photo-container relative z-10 w-48 sm:w-56 h-64 sm:h-72 flex items-end justify-center pointer-events-none">
+                <img src="./assets/my.png" alt="Faril Putra Pratama" class="max-h-full max-w-full object-contain filter drop-shadow-[0_14px_28px_rgba(15,23,42,0.22)] select-none">
+              </div>
+
+              <!-- Floating Micro-Badge Top Left: GitHub -->
+              <div class="absolute top-3 left-3 z-20 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-xl px-3 py-1.5 shadow-sm font-mono text-[11px] flex items-center gap-2">
+                <i data-lucide="github" class="w-3.5 h-3.5 text-slate-800"></i>
+                <span class="font-bold text-slate-800">FARILtau72</span>
+                <span class="text-blue-600 font-semibold">● Building</span>
+              </div>
+
+              <!-- Floating Micro-Badge Top Right: Tech Core -->
+              <div class="absolute top-3 right-3 z-20 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-xl px-2.5 py-1.5 shadow-sm font-mono text-[10px] text-slate-600 font-bold flex items-center gap-1">
+                <span class="text-blue-500">Python</span>
+                <span>·</span>
+                <span class="text-cyan-500">AI</span>
+                <span>·</span>
+                <span class="text-lime-600">Web</span>
+              </div>
+
+              <!-- Floating Identity Pill at bottom center -->
+              <div class="absolute bottom-3 z-20 px-3.5 py-1 rounded-full bg-slate-900/90 backdrop-blur-md text-white border border-slate-700 shadow-md font-mono text-[11px] font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Faril Putra Pratama · Bekasi, ID</span>
+              </div>
+
+            </div>
+
+            <!-- Bottom Structured Dashboard Widgets (Clean, Symmetrical & Tight) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+              
+              <!-- Widget 1: $ whoami -->
+              <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-3 font-mono text-xs flex flex-col justify-between">
+                <div class="text-slate-400 text-[10px] flex items-center gap-1 mb-1">
+                  <span class="text-blue-500 font-bold">$</span>
+                  <span>whoami</span>
+                </div>
+                <div class="text-slate-900 font-bold text-xs">
+                  faril
+                </div>
+                <div data-i18n="hero_whoami_desc" class="text-[11px] text-slate-500 mt-0.5">
+                  student developer · builder
+                </div>
+              </div>
+
+              <!-- Widget 2: CURRENTLY -->
+              <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-3 font-mono text-xs flex flex-col justify-between">
+                <div class="text-slate-400 text-[10px] font-bold uppercase tracking-wider mb-1 flex items-center justify-between">
+                  <span data-i18n="hero_currently_title">CURRENTLY</span>
+                  <span class="text-emerald-500 text-[9px] font-bold">ACTIVE</span>
+                </div>
+                <div class="space-y-0.5 text-[11px] text-slate-700">
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-blue-500 font-bold">▹</span> <span data-i18n="hero_currently_item1">System Development</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-lime-600 font-bold">▹</span> <span data-i18n="hero_currently_item2">AI & Backend Systems</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </header>
+
+
+    <!-- ====================================================================
+         ABOUT SECTION & BENTO GRID
+         ==================================================================== -->
+    <section id="about" class="space-y-12">
+      <!-- Editorial Header & Profile Spotlight Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Left Narrative -->
+        <div class="lg:col-span-7 space-y-4">
+          <span class="badge-pill">
+            <i data-lucide="user" class="w-3.5 h-3.5 text-blue-600"></i>
+            <span data-i18n="about_badge">ABOUT_FARIL</span>
+          </span>
+          <h2 data-i18n="about_heading" class="section-heading">
+            Not waiting until graduation to start building.
+          </h2>
+          <div class="text-slate-600 space-y-4 text-base sm:text-lg leading-relaxed">
+            <p data-i18n-html="about_intro_1">
+              I'm <strong>Faril Putra Pratama</strong>, a Software Engineering student from <strong>Bekasi, Indonesia</strong>.
+            </p>
+            <p data-i18n-html="about_intro_2">
+              I enjoy learning technology by actually building things — software systems, web applications, AI experiments, internal tools, and occasionally strange ideas that turn into real projects.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-3 py-1 rounded-lg bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-mono font-semibold">Backend Engineering</span>
+              <span class="px-3 py-1 rounded-lg bg-lime-50 dark:bg-lime-950/40 border border-lime-200 dark:border-lime-800 text-lime-800 dark:text-lime-300 text-xs font-mono font-semibold">Artificial Intelligence</span>
+              <span class="px-3 py-1 rounded-lg bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200 dark:border-cyan-800 text-cyan-800 dark:text-cyan-300 text-xs font-mono font-semibold">Web Development</span>
+              <span class="px-3 py-1 rounded-lg bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800 text-purple-700 dark:text-purple-300 text-xs font-mono font-semibold">Cybersecurity</span>
+              <span class="px-3 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-300 text-xs font-mono font-semibold">Developer Tools</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Profile Spotlight Card (Faril's Real Photo) -->
+        <div class="lg:col-span-5">
+          <div class="clean-card p-6 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950 border-slate-200 relative overflow-hidden group">
+            <div class="flex items-center gap-4">
+              <!-- Faril's Profile Picture -->
+              <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-slate-900 shadow-md flex-shrink-0 bg-slate-900">
+                <img src="./assets/my.jpg" alt="Faril Putra Pratama Profile Picture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <span class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-slate-900" title="Active"></span>
+              </div>
+
+              <!-- Profile Details -->
+              <div class="space-y-1">
+                <div class="inline-flex items-center gap-1.5 font-mono text-[10px] text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 px-2 py-0.5 rounded-full font-bold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span data-i18n="about_role_badge">STUDENT & DEV</span>
+                </div>
+                <h3 class="text-xl font-extrabold text-slate-950 font-sans tracking-tight">
+                  Faril Putra Pratama
+                </h3>
+                <p class="font-mono text-xs text-blue-600 dark:text-blue-400 font-semibold">
+                  FARILtau72
+                </p>
+                <p class="text-xs text-slate-500 flex items-center gap-1 pt-1">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Bekasi, West Java, ID</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Profile Info Metadata Rows -->
+            <div class="mt-5 pt-4 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-xs font-mono">
+              <div class="bg-white dark:bg-slate-800 p-2.5 rounded-lg border border-slate-200 dark:border-slate-700">
+                <span class="text-[10px] text-slate-400 block" data-i18n="about_meta_edu">EDUCATION</span>
+                <span class="font-bold text-slate-800 text-[11px]">SMKS Taruna Bangsa</span>
+              </div>
+              <div class="bg-white dark:bg-slate-800 p-2.5 rounded-lg border border-slate-200 dark:border-slate-700">
+                <span class="text-[10px] text-slate-400 block" data-i18n="about_meta_focus">FOCUS</span>
+                <span class="font-bold text-blue-600 dark:text-blue-400 text-[11px]">Python & AI Systems</span>
+              </div>
+            </div>
+
+            <div class="mt-3 flex items-center justify-between text-[11px] font-mono text-slate-400">
+              <span class="italic text-[10px]" data-i18n="about_photo_verified">Faril Putra Pratama · Photo Verified</span>
+              <a href="https://github.com/FARILtau72" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline font-bold flex items-center gap-1">
+                Verified GitHub ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bento Grid (5 Cards + Verification Badges) -->
+      <div class="bento-grid">
+        
+        <!-- Card 01: School -->
+        <div class="bento-col-4 clean-card p-6 flex flex-col justify-between group">
+          <div class="flex items-center justify-between text-slate-400 font-mono text-xs">
+            <span class="font-bold text-blue-600 text-sm">01</span>
+            <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+          </div>
+          <div class="mt-8">
+            <h3 data-i18n="bento_01_title" class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+              Software Engineering
+            </h3>
+            <p class="text-slate-500 text-sm mt-1">
+              SMKS Taruna Bangsa
+            </p>
+            <p data-i18n="bento_01_desc" class="text-xs text-slate-400 mt-2">
+              Focusing on algorithms, system architecture, database modeling, and software lifecycles.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 02: System Developer -->
+        <div class="bento-col-4 clean-card p-6 flex flex-col justify-between group">
+          <div class="flex items-center justify-between text-slate-400 font-mono text-xs">
+            <span class="font-bold text-lime-600 text-sm">02</span>
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+          </div>
+          <div class="mt-8">
+            <h3 data-i18n="bento_02_title" class="text-xl font-bold text-slate-900 group-hover:text-lime-600 transition-colors">
+              System Developer
+            </h3>
+            <p data-i18n="bento_02_sub" class="text-slate-500 text-sm mt-1">
+              Building real operational software.
+            </p>
+            <p data-i18n="bento_02_desc" class="text-xs text-slate-400 mt-2">
+              Creating reliable internal tools, inventory tracking, and REST APIs that run in business operations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 03: Location -->
+        <div class="bento-col-4 clean-card p-6 flex flex-col justify-between group">
+          <div class="flex items-center justify-between text-slate-400 font-mono text-xs">
+            <span class="font-bold text-cyan-600 text-sm">03</span>
+            <i data-lucide="globe" class="w-4 h-4"></i>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-xl font-bold text-slate-900 group-hover:text-cyan-600 transition-colors">
+              Bekasi, Indonesia
+            </h3>
+            <p data-i18n="bento_03_sub" class="text-slate-500 text-sm mt-1">
+              Based here. Building everywhere.
+            </p>
+            <p data-i18n-html="bento_03_desc" class="text-xs text-slate-400 mt-2">
+              Proud of my roots — even created <span class="text-blue-600 font-mono">PyKasi</span>, a custom programming language with Bekasi syntax.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 04: Python Core -->
+        <div class="bento-col-6 clean-card p-6 flex flex-col justify-between group bg-gradient-to-br from-white to-blue-50/40 dark:from-slate-900 dark:to-blue-950/20">
+          <div class="flex items-center justify-between text-slate-400 font-mono text-xs">
+            <span class="font-bold text-blue-600 text-sm">04</span>
+            <i data-lucide="code-2" class="w-4 h-4 text-blue-600"></i>
+          </div>
+          <div class="mt-6">
+            <div class="inline-flex items-center gap-1.5 font-mono text-xs text-blue-700 dark:text-blue-300 bg-blue-100/60 dark:bg-blue-950/60 px-2 py-0.5 rounded mb-2">
+              PRIMARY_LANGUAGE
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+              Python
+            </h3>
+            <p data-i18n-html="bento_04_desc" class="text-slate-600 text-sm mt-2 leading-relaxed">
+              The language I reach for most. From fast backend services with <strong>FastAPI</strong> and <strong>Flask</strong>, to lexer/compilers with <strong>PLY</strong> and ML pipelines with <strong>Scikit-learn</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 05: Terminal Status -->
+        <div class="bento-col-6 clean-card p-6 bg-slate-900 text-white flex flex-col justify-between font-mono">
+          <div class="flex items-center justify-between text-slate-400 text-xs">
+            <span>$ faril --status</span>
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          </div>
+          <div class="my-4 space-y-1.5 text-sm">
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-400">✔</span>
+              <span class="text-slate-200">BUILDING:</span>
+              <span data-i18n="bento_05_build" class="text-blue-400">Modern backend tools & AI models</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-cyan-400">✔</span>
+              <span class="text-slate-200">LEARNING:</span>
+              <span data-i18n="bento_05_learn" class="text-amber-300">Advanced IT Auditing & Security</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-lime-400">✔</span>
+              <span class="text-slate-200">SHIPPING:</span>
+              <span data-i18n="bento_05_ship" class="text-emerald-300">Clean, verifiable GitHub code</span>
+            </div>
+          </div>
+          <div class="text-[11px] text-slate-400 border-t border-slate-800 pt-3 flex justify-between">
+            <span data-i18n="bento_05_uptime">UPTIME: 100% CURIOSITY</span>
+            <span class="text-emerald-400">READY</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Verified Community & Scholarship Highlights -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+        <div class="clean-card p-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 flex items-center justify-center text-amber-600">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div data-i18n="comm_lamp_badge" class="text-xs font-mono font-bold text-amber-800 dark:text-amber-300 uppercase">100% Beasiswa CodeLamp</div>
+            <div data-i18n="comm_lamp_title" class="text-sm font-semibold text-slate-800">Skor 97.5 (IT Auditor)</div>
+          </div>
+        </div>
+
+        <div class="clean-card p-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 flex items-center justify-center text-rose-600">
+            <i data-lucide="trending-up" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div data-i18n="comm_star_badge" class="text-xs font-mono font-bold text-rose-800 dark:text-rose-300 uppercase">#2 Top HTML Developer</div>
+            <div data-i18n="comm_star_title" class="text-sm font-semibold text-slate-800">Bekasi (Stardev Verified)</div>
+          </div>
+        </div>
+
+        <div class="clean-card p-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800 flex items-center justify-center text-purple-600">
+            <i data-lucide="shield" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div data-i18n="comm_cosmic_badge" class="text-xs font-mono font-bold text-purple-800 dark:text-purple-300 uppercase">Cosmic Security Staff</div>
+            <div data-i18n="comm_cosmic_title" class="text-sm font-semibold text-slate-800">Volunteer & Community</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         FEATURED WORK (SELECTED WORK CASE STUDIES)
+         ==================================================================== -->
+    <section id="projects" class="space-y-16">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="badge-pill">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-blue-600"></i>
+            <span data-i18n="proj_badge">SELECTED_WORK</span>
+          </span>
+          <h2 data-i18n="proj_heading" class="section-heading mt-3">
+            Things I've actually built.
+          </h2>
+          <p data-i18n="proj_sub" class="text-slate-500 text-sm sm:text-base mt-1">
+            Real systems, competitive hackathon projects, and developer experiments.
+          </p>
+        </div>
+        <a href="#lab-archive" data-i18n="proj_browse_all" class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition-colors">
+          Browse All 64 Repositories →
+        </a>
+      </div>
+
+      <!-- ------------------------------------------------------------------
+           PROJECT 01: AETERNA AI (Hero Project)
+           ------------------------------------------------------------------ -->
+      <article class="project-showcase p-6 sm:p-10 border-slate-200">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left Details -->
+          <div class="lg:col-span-5 space-y-5">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+                Artificial Intelligence
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                Smart City
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                Sustainability
+              </span>
+            </div>
+
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+              AETERNA AI
+            </h3>
+
+            <p data-i18n="aeterna_desc" class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              An AI-powered municipal waste prediction platform designed to forecast waste generation volume across DKI Jakarta and support smarter operational logistics and fleet allocation.
+            </p>
+
+            <!-- Milestones Badges -->
+            <div class="space-y-2 pt-1">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-300 text-xs font-mono font-bold">
+                <span data-i18n="aeterna_award1">🥉 3rd Place — Hacktivate 2026</span>
+              </div>
+              <div class="block sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-blue-900 dark:text-blue-300 text-xs font-mono font-bold sm:ml-2">
+                <span data-i18n="aeterna_award2">⭐ Finalist — AI Open Innovation Challenge 2026</span>
+              </div>
+            </div>
+
+            <!-- Tech Tags -->
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="badge-pill">Python</span>
+              <span class="badge-pill">FastAPI</span>
+              <span class="badge-pill">Scikit-learn</span>
+              <span class="badge-pill">Chronos T5</span>
+              <span class="badge-pill">Time-Series</span>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3 pt-3">
+              <a href="https://github.com/FARILtau72/PROJECCT_HACKATHON" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-2">
+                <span data-i18n="aeterna_repo_btn">View Hackathon Repo</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+              <a href="https://huggingface.co" target="_blank" rel="noopener noreferrer" class="bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium text-xs sm:text-sm px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5">
+                <span data-i18n="aeterna_arch_btn">AI Architecture</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Prediction Simulator Mockup -->
+          <div class="lg:col-span-7">
+            <div class="browser-mockup">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="browser-dot red"></span>
+                  <span class="browser-dot yellow"></span>
+                  <span class="browser-dot green"></span>
+                </div>
+                <div class="browser-url">aeterna-ai.jakarta.gov/forecast-simulator</div>
+                <span class="font-mono text-[10px] text-emerald-600 font-bold ml-auto flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  LIVE_MODEL
+                </span>
+              </div>
+
+              <div class="p-6 bg-slate-50/50 space-y-6">
+                <!-- Controls Row -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-white dark:bg-slate-800 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700">
+                  <div>
+                    <label data-i18n="aeterna_sim_district" class="block text-[11px] font-mono text-slate-500 mb-1">DISTRICT</label>
+                    <select id="aeterna-district" class="w-full text-xs font-medium bg-slate-50 border border-slate-200 rounded p-1.5 focus:outline-none focus:border-blue-500">
+                      <option value="Jakarta Selatan">Jakarta Selatan</option>
+                      <option value="Jakarta Pusat">Jakarta Pusat</option>
+                      <option value="Jakarta Barat">Jakarta Barat</option>
+                      <option value="Jakarta Timur">Jakarta Timur</option>
+                      <option value="Jakarta Utara">Jakarta Utara</option>
+                    </select>
+                  </div>
+                  <div>
+                    <div class="flex justify-between items-center mb-1">
+                      <label data-i18n="aeterna_sim_temp" class="text-[11px] font-mono text-slate-500">AVG TEMP</label>
+                      <span id="aeterna-temp-val" class="text-[11px] font-mono font-bold text-blue-600">30°C</span>
+                    </div>
+                    <input type="range" id="aeterna-temp" min="26" max="36" value="30" class="w-full accent-blue-600 cursor-pointer">
+                  </div>
+                  <div>
+                    <label data-i18n="aeterna_sim_event" class="block text-[11px] font-mono text-slate-500 mb-1">SURGE EVENT</label>
+                    <select id="aeterna-event" class="w-full text-xs font-medium bg-slate-50 border border-slate-200 rounded p-1.5 focus:outline-none focus:border-blue-500">
+                      <option value="no">Normal Day</option>
+                      <option value="yes">Holiday / Event (+22%)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Live Metrics Summary -->
+                <div class="grid grid-cols-3 gap-3">
+                  <div class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <span data-i18n="aeterna_sim_metric_vol" class="text-[10px] font-mono text-slate-400">ESTIMATED GENERATION</span>
+                    <div id="aeterna-metric-volume" class="text-base sm:text-lg font-black text-slate-900 mt-0.5">2,245 Tons</div>
+                  </div>
+                  <div class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <span data-i18n="aeterna_sim_metric_fleet" class="text-[10px] font-mono text-slate-400">FLEET NEEDED</span>
+                    <div id="aeterna-metric-trucks" class="text-base sm:text-lg font-black text-blue-600 mt-0.5">188 Units</div>
+                  </div>
+                  <div class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <span data-i18n="aeterna_sim_metric_conf" class="text-[10px] font-mono text-slate-400">CHRONOS CONFIDENCE</span>
+                    <div id="aeterna-metric-confidence" class="text-base sm:text-lg font-black text-emerald-600 mt-0.5">94.8%</div>
+                  </div>
+                </div>
+
+                <!-- 7-Day Bar Chart Preview -->
+                <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+                  <div class="flex items-center justify-between mb-3 text-xs">
+                    <span data-i18n="aeterna_sim_chart_title" class="font-bold text-slate-800">7-Day Dynamic Forecast Projection</span>
+                    <span class="text-[11px] font-mono text-slate-400">ML Latency: &lt;110ms</span>
+                  </div>
+                  <div id="aeterna-bar-chart" class="flex items-end justify-between gap-2 pt-2">
+                    <!-- Dynamically populated by JS -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- ------------------------------------------------------------------
+           PROJECT 02: PyKasi (Bekasi Slang Language)
+           ------------------------------------------------------------------ -->
+      <article class="project-showcase p-6 sm:p-10 border-slate-200">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left: Code Editor Interface -->
+          <div class="lg:col-span-7 order-2 lg:order-1">
+            <div class="code-window">
+              <div class="code-header">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+                  <span class="ml-2 text-slate-400 font-mono">program_bekasi.kasi</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <select id="pykasi-sample-select" class="bg-slate-800 text-xs font-mono text-slate-300 rounded px-2 py-1 border border-slate-700 outline-none">
+                    <option value="hello">Sample: Halo Bekasi</option>
+                    <option value="loop">Sample: Perulangan Nyante</option>
+                    <option value="condition">Sample: Logika Kalem</option>
+                  </select>
+                  <button id="pykasi-run-btn" class="bg-blue-600 hover:bg-blue-500 text-white font-mono text-xs px-3 py-1 rounded transition-colors flex items-center gap-1">
+                    <i data-lucide="play" class="w-3 h-3"></i>
+                    <span>Run</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Code Content -->
+              <pre class="code-content"><code id="pykasi-code-display">// PyKasi 0.1 - Syntax Bekasi Asli
+bocah nama = "Faril Putra Pratama"
+bocah kota = "Bekasi"
+
+cetak("Halo bray! Kenalin nama gua: " + nama)
+cetak("Asal dari: " + kota)
+cetak("Status: Mahir Python & PLY Lexer")</code></pre>
+
+              <!-- Terminal Output Display -->
+              <div class="border-t border-slate-800 bg-slate-950 p-4">
+                <div class="text-[11px] font-mono text-slate-400 mb-1 flex items-center justify-between">
+                  <span>TERMINAL OUTPUT</span>
+                  <span class="text-emerald-400">PLY Lexer/Parser OK</span>
+                </div>
+                <pre id="pykasi-terminal-output" class="text-xs font-mono text-emerald-400 whitespace-pre-wrap leading-relaxed">[PYKASI INTERPRETER v1.0.2]
+> Parsing tokens with PLY (Lex-Yacc)...
+> AST validated.
+
+Halo bray! Kenalin nama gua: Faril Putra Pratama
+Asal dari: Bekasi
+Status: Mahir Python & PLY Lexer
+
+[Selesai nyante tanpa error: Exit Code 0]</pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Narrative -->
+          <div class="lg:col-span-5 space-y-5 order-1 lg:order-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-purple-50 text-purple-700 border border-purple-200">
+              Compiler & Lexer Engineering
+            </span>
+
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+              PyKasi
+            </h3>
+            
+            <p data-i18n="pykasi_sub" class="font-mono text-sm text-blue-600 dark:text-blue-400 font-bold">
+              What if Bekasi had its own programming language?
+            </p>
+
+            <p data-i18n-html="pykasi_desc" class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              An experimental programming language built from scratch in Python using <strong>PLY (Python Lex-Yacc)</strong>. Implements custom tokenization, AST generation, and an execution interpreter with syntactic keywords inspired by Bekasi slang.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="badge-pill">Python</span>
+              <span class="badge-pill">PLY (Lex-Yacc)</span>
+              <span class="badge-pill">Compiler Theory</span>
+              <span class="badge-pill">Abstract Syntax Tree</span>
+            </div>
+
+            <div class="pt-2">
+              <a href="https://github.com/FARILtau72/pykasi" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-medium text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-sm hover:shadow transition-all inline-flex items-center gap-2">
+                <i data-lucide="github" class="w-4 h-4"></i>
+                <span data-i18n="pykasi_repo_btn">View Repository on GitHub</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-400"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- ------------------------------------------------------------------
+           PROJECT 03 & 04: Two Column Grid (QR Attendance & TV Slideshow)
+           ------------------------------------------------------------------ -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- PROJECT 03: QR Attendance System -->
+        <article class="clean-card p-6 sm:p-8 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                School Management
+              </span>
+              <span class="font-mono text-xs text-slate-400">Python · Flask · TiDB</span>
+            </div>
+
+            <h3 data-i18n="qr_title" class="text-2xl font-bold text-slate-950">
+              QR Attendance System
+            </h3>
+
+            <p data-i18n="qr_desc" class="text-slate-600 text-sm leading-relaxed">
+              Full student attendance management platform featuring instant QR scanning, student record management, historical attendance analytics, and role-based exports.
+            </p>
+
+            <!-- Interactive QR Scanner Simulation Widget -->
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-slate-700 dark:text-slate-300">QR CAMERA SCANNER</span>
+                <span id="qr-scan-status" class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Ready to Scan</span>
+              </div>
+
+              <!-- Scanner simulation trigger -->
+              <button id="qr-scan-trigger" class="w-full py-2 px-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:border-blue-500 rounded-lg text-xs font-mono font-semibold text-slate-800 dark:text-slate-200 shadow-sm flex items-center justify-center gap-2 transition-all cursor-pointer">
+                <i data-lucide="qr-code" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+                <span data-i18n="qr_scan_btn">Simulate Student QR Scan</span>
+              </button>
+
+              <!-- Live Log Table -->
+              <div class="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+                <table class="w-full text-left text-xs">
+                  <thead class="bg-slate-100/70 dark:bg-slate-900/70 border-b border-slate-200 dark:border-slate-700 text-slate-500 font-mono text-[10px]">
+                    <tr>
+                      <th class="py-1.5 px-3">TIME</th>
+                      <th class="py-1.5 px-3">STUDENT</th>
+                      <th class="py-1.5 px-3">CLASS</th>
+                      <th class="py-1.5 px-3 text-right">STATUS</th>
+                    </tr>
+                  </thead>
+                  <tbody id="qr-log-tbody">
+                    <tr class="border-b border-slate-100 dark:border-slate-800">
+                      <td class="py-2 px-3 font-mono text-slate-500 text-[11px]">07:12:04</td>
+                      <td class="py-2 px-3 font-semibold text-slate-800 text-xs">Faril Putra Pratama</td>
+                      <td class="py-2 px-3 text-slate-500 text-xs">XII RPL 1</td>
+                      <td class="py-2 px-3 text-right">
+                        <span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-mono bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                          Hadir Tepat Waktu
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="badge-pill">Python</span>
+              <span class="badge-pill">Flask</span>
+              <span class="badge-pill">JavaScript</span>
+              <span class="badge-pill">TiDB</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <a href="https://github.com/FARILtau72/Qrcode" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 flex items-center gap-1.5">
+              <span data-i18n="qr_repo_btn">View Repository (FARILtau72/Qrcode)</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT 04: TV Slideshow RPL -->
+        <article class="clean-card p-6 sm:p-8 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+                School Digital Signage
+              </span>
+              <span class="font-mono text-xs text-slate-400">HTML · Tailwind · JS</span>
+            </div>
+
+            <h3 data-i18n="tv_title" class="text-2xl font-bold text-slate-950">
+              TV Slideshow RPL
+            </h3>
+
+            <p data-i18n="tv_desc" class="text-slate-600 text-sm leading-relaxed">
+              Browser-based multimedia information and digital signage system built for the Software Engineering Department displays at SMKS Taruna Bangsa.
+            </p>
+
+            <!-- Interactive Digital Signage Preview -->
+            <div class="bg-slate-900 rounded-xl p-4 text-white space-y-3 font-mono">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-2 text-xs">
+                <span class="text-cyan-400 font-bold">SMKS TARUNA BANGSA // RPL</span>
+                <span id="tv-slide-indicator" class="text-slate-400 text-[11px]">Slide 1 of 3</span>
+              </div>
+
+              <!-- Slides Display -->
+              <div class="h-28 flex items-center justify-center p-3 bg-slate-800/80 rounded-lg text-center">
+                <div class="tv-slide-item">
+                  <div class="text-xs text-amber-400 font-bold">📢 PENGUMUMAN UNIT PRODUKSI</div>
+                  <div class="text-sm font-semibold mt-1">Penerimaan Proyek Internal Software Q3</div>
+                  <div class="text-[11px] text-slate-400 mt-1">Koordinasi di Lab 3 RPL bersama Faril & Tim</div>
+                </div>
+                <div class="tv-slide-item hidden">
+                  <div class="text-xs text-emerald-400 font-bold">🏆 PRESTASI SISWA RPL</div>
+                  <div class="text-sm font-semibold mt-1">Juara 3 Hacktivate 2026 — Aeterna AI</div>
+                  <div class="text-[11px] text-slate-400 mt-1">Membanggakan nama sekolah di kancah nasional</div>
+                </div>
+                <div class="tv-slide-item hidden">
+                  <div class="text-xs text-blue-400 font-bold">💻 AGENDA WORKSHOP</div>
+                  <div class="text-sm font-semibold mt-1">Pengenalan Python FastAPI & Cyber Audit</div>
+                  <div class="text-[11px] text-slate-400 mt-1">Sabtu Pukul 09:00 WIB di Aula Taruna Bangsa</div>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <div class="flex items-center justify-between pt-1">
+                <button id="tv-slide-prev" class="text-xs text-slate-400 hover:text-white flex items-center gap-1 cursor-pointer">
+                  <span>← Prev</span>
+                </button>
+                <span class="text-[10px] text-slate-500">Auto-cycle 8s</span>
+                <button id="tv-slide-next" class="text-xs text-slate-400 hover:text-white flex items-center gap-1 cursor-pointer">
+                  <span>Next →</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="badge-pill">HTML5</span>
+              <span class="badge-pill">Tailwind CSS</span>
+              <span class="badge-pill">JavaScript</span>
+              <span class="badge-pill">Digital Signage</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <a href="https://github.com/FARILtau72/slideshow" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 flex items-center gap-1.5">
+              <span data-i18n="tv_repo_btn">View Repository (FARILtau72/slideshow)</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         LAB ARCHIVE ("More things from the lab")
+         ==================================================================== -->
+    <section id="lab-archive" class="space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="badge-pill">
+            <i data-lucide="flask-conical" class="w-3.5 h-3.5 text-blue-600"></i>
+            <span data-i18n="lab_badge">THE_LAB</span>
+          </span>
+          <h2 data-i18n="lab_heading" class="section-heading mt-3">
+            More things from the lab.
+          </h2>
+          <p data-i18n-html="lab_sub" class="text-slate-500 text-sm mt-1">
+            Real public repositories from GitHub (<span class="font-mono font-semibold text-slate-700 dark:text-slate-300">FARILtau72</span>).
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span id="repo-count-badge" class="font-mono text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+            Loading repos...
+          </span>
+        </div>
+      </div>
+
+      <!-- Controls: Search & Category Filter Pills -->
+      <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+        <div class="relative flex-1 max-w-md">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input type="text" id="repo-search-input" data-i18n-placeholder="lab_search_placeholder" placeholder="Search repositories (e.g. bultang, yolo, absen)..." class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl pl-10 pr-4 py-2 text-xs font-mono focus:outline-none focus:border-blue-500 shadow-sm">
+        </div>
+
+        <div class="flex flex-wrap items-center gap-1.5">
+          <button data-filter="all" class="repo-filter-btn px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-slate-900 bg-slate-900 dark:border-blue-600 dark:bg-blue-600 text-white transition-all cursor-pointer">
+            <span data-i18n="filter_all">All</span>
+          </button>
+          <button data-filter="python" class="repo-filter-btn px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all cursor-pointer">
+            <span data-i18n="filter_python">Python</span>
+          </button>
+          <button data-filter="web" class="repo-filter-btn px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all cursor-pointer">
+            <span data-i18n="filter_web">Web & Frontends</span>
+          </button>
+          <button data-filter="security" class="repo-filter-btn px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all cursor-pointer">
+            <span data-i18n="filter_security">Tools & Security</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Repositories Grid Container -->
+      <div id="repo-archive-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Dynamically rendered by main.js from data/repos.json -->
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         GITHUB SECTION & CONTRIBUTION ACTIVITY
+         ==================================================================== -->
+    <section id="github" class="space-y-8">
+      <div>
+        <span class="badge-pill">
+          <i data-lucide="git-branch" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span data-i18n="gh_badge">GITHUB_METRICS</span>
+        </span>
+        <h2 data-i18n="gh_heading" class="section-heading mt-3">
+          The code side of me.
+        </h2>
+      </div>
+
+      <!-- Main GitHub Showcase Card -->
+      <div class="clean-card p-6 sm:p-10 border-slate-200 bg-white space-y-8">
+        
+        <!-- Profile Header -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-900 to-blue-700 flex items-center justify-center text-white font-mono font-extrabold text-2xl shadow-md border-2 border-slate-900">
+              F
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="text-xl font-extrabold text-slate-900">FARILtau72</h3>
+                <span data-i18n="gh_role" class="text-xs font-mono px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                  Developer
+                </span>
+              </div>
+              <p class="text-xs font-mono text-slate-500 mt-1">
+                Faril Putra Pratama · Bekasi, Indonesia · SMK Taruna Bangsa
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 text-xs font-mono">
+            <div class="bg-slate-50 dark:bg-slate-800 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 block text-[10px]">PUBLIC REPOS</span>
+              <span class="font-extrabold text-slate-900 text-sm">64</span>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-800 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 block text-[10px]">CORE LANGUAGE</span>
+              <span class="font-extrabold text-blue-600 dark:text-blue-400 text-sm">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Developer Activity Contribution Matrix -->
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span data-i18n="gh_activity_title" class="font-mono text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wide">Developer Activity</span>
+            <div class="flex items-center gap-1.5 text-[10px] font-mono text-slate-400">
+              <span data-i18n="gh_less">Less</span>
+              <span class="w-2.5 h-2.5 rounded-sm bg-slate-100 dark:bg-slate-800"></span>
+              <span class="w-2.5 h-2.5 rounded-sm bg-blue-200 dark:bg-blue-900"></span>
+              <span class="w-2.5 h-2.5 rounded-sm bg-sky-400 dark:bg-sky-600"></span>
+              <span class="w-2.5 h-2.5 rounded-sm bg-blue-600 dark:bg-blue-500"></span>
+              <span data-i18n="gh_more">More</span>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto pb-2">
+            <div id="github-activity-matrix" class="flex gap-1 min-w-[700px]">
+              <!-- Dynamically populated 40 weeks * 7 days -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Large Interactive GitHub CTA Box -->
+        <a href="https://github.com/FARILtau72" target="_blank" rel="noopener noreferrer" class="github-cta-box group">
+          <div class="font-mono text-sm sm:text-base font-bold flex items-center gap-3">
+            <span class="text-blue-400">$</span>
+            <span class="cta-text-normal">&gt; open github</span>
+            <span class="cta-text-hover">&gt; github.com/FARILtau72 ↗</span>
+          </div>
+          <div class="flex items-center gap-2 font-mono text-xs text-slate-400 group-hover:text-blue-400 transition-colors">
+            <span data-i18n="gh_explore_commits">Explore all commits & experiments</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         SOCIAL PRESENCE ("Elsewhere on the internet.")
+         ==================================================================== -->
+    <section id="social" class="space-y-8">
+      <div>
+        <span class="badge-pill">
+          <i data-lucide="network" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span data-i18n="social_badge">DIGITAL_FOOTPRINT</span>
+        </span>
+        <h2 data-i18n="social_heading" class="section-heading mt-3">
+          Elsewhere on the internet.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- CARD 1: LinkedIn Professional Card -->
+        <div class="clean-card p-6 flex flex-col justify-between social-card-linkedin group">
+          <div>
+            <div class="flex items-center justify-between text-slate-400 mb-6">
+              <i data-lucide="linkedin" class="w-6 h-6 text-blue-600"></i>
+              <span class="font-mono text-xs text-slate-400">PROFESSIONAL</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+              Faril Putra Pratama
+            </h3>
+            <p data-i18n="social_linkedin_role" class="font-mono text-xs text-blue-600 dark:text-blue-400 font-semibold mt-1">
+              System Developer & Inventory Specialist
+            </p>
+            <p data-i18n="social_linkedin_desc" class="text-xs text-slate-500 mt-3 leading-relaxed">
+              Professional history, system development experience, verified scholarships, and technical recommendations.
+            </p>
+            
+            <!-- Slide-in Status on hover -->
+            <div data-i18n="social_linkedin_status" class="slide-status mt-4 p-2.5 rounded bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900 text-[11px] font-mono text-blue-800 dark:text-blue-200">
+              ● Active profile: Ready for internships & engineering collaborations.
+            </div>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <a href="https://www.linkedin.com/in/faril-putra-pratama-81561a280" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 flex items-center gap-1.5">
+              <span data-i18n="social_linkedin_btn">Connect on LinkedIn</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2: GitHub Terminal Card -->
+        <div class="clean-card p-6 flex flex-col justify-between bg-slate-900 text-white font-mono social-card-github group">
+          <div>
+            <div class="flex items-center justify-between text-slate-400 mb-6">
+              <i data-lucide="terminal" class="w-6 h-6 text-emerald-400"></i>
+              <span class="text-xs text-slate-400">DEV TERMINAL</span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors font-sans">
+              FARILtau72
+            </h3>
+            <div class="mt-4 space-y-1.5 text-xs text-slate-300">
+              <div>&gt; repos <span class="text-slate-500">(64 public)</span></div>
+              <div>&gt; experiments <span class="text-slate-500">(PLY, YOLO, OSINT)</span></div>
+              <div>&gt; projects <span class="text-slate-500">(Aeterna AI, PyKasi)</span></div>
+              <div class="flex items-center gap-1">&gt; commits<span class="cursor-blink inline-block w-2 h-3.5 bg-emerald-400"></span></div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-slate-800">
+            <a href="https://github.com/FARILtau72" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+              <span>Open GitHub ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3: Instagram Editorial Card (Photo separation hover) -->
+        <div class="clean-card p-6 flex flex-col justify-between social-card-instagram group">
+          <div>
+            <div class="flex items-center justify-between text-slate-400 mb-4">
+              <i data-lucide="camera" class="w-6 h-6 text-rose-500"></i>
+              <span class="font-mono text-xs text-slate-400">VISUAL JOURNAL</span>
+            </div>
+            
+            <h3 data-i18n="social_journal_sub" class="text-xl font-bold text-slate-900 group-hover:text-rose-600 transition-colors">
+              Behind the code.
+            </h3>
+            <p data-i18n="social_journal_desc" class="text-xs text-slate-500 mt-1 leading-relaxed">
+              Projects, school events & daily life beyond the editor.
+            </p>
+
+            <!-- Decorative Layered Photo Tiles (Separate on Hover) -->
+            <div class="relative h-28 my-4 flex items-center justify-center">
+              <div class="photo-tile photo-tile-1 absolute w-24 h-20 rounded-lg bg-gradient-to-tr from-slate-200 to-slate-100 dark:from-slate-800 dark:to-slate-700 border border-slate-300 dark:border-slate-600 shadow-sm flex flex-col items-center justify-center p-1 text-center font-mono text-[9px] text-slate-500">
+                <i data-lucide="laptop" class="w-4 h-4 mb-1 text-blue-500"></i>
+                <span>Lab Session</span>
+              </div>
+              <div class="photo-tile photo-tile-2 absolute w-24 h-20 rounded-lg bg-gradient-to-tr from-blue-100 to-indigo-50 dark:from-blue-950 dark:to-indigo-900 border border-blue-200 dark:border-blue-800 shadow-sm flex flex-col items-center justify-center p-1 text-center font-mono text-[9px] text-blue-700 dark:text-blue-300">
+                <i data-lucide="trophy" class="w-4 h-4 mb-1 text-amber-500"></i>
+                <span>Hackathon</span>
+              </div>
+              <div class="photo-tile photo-tile-3 absolute w-24 h-20 rounded-lg bg-gradient-to-tr from-rose-50 to-pink-50 dark:from-rose-950 dark:to-pink-900 border border-rose-200 dark:border-rose-800 shadow-sm flex flex-col items-center justify-center p-1 text-center font-mono text-[9px] text-rose-700 dark:text-rose-300">
+                <i data-lucide="coffee" class="w-4 h-4 mb-1 text-rose-500"></i>
+                <span>Daily Life</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1.5">
+              <span>Instagram ↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         EXPERIENCE SECTION
+         ==================================================================== -->
+    <section id="experience" class="space-y-12">
+      <div>
+        <span class="badge-pill">
+          <i data-lucide="briefcase" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span data-i18n="exp_badge">TIMELINE</span>
+        </span>
+        <h2 data-i18n="exp_heading" class="section-heading mt-3">
+          Experience beyond tutorials.
+        </h2>
+        <p data-i18n="exp_sub" class="text-slate-500 text-sm mt-1">
+          Real roles, school production units, and community contributions.
+        </p>
+      </div>
+
+      <!-- Vertical Timeline -->
+      <div class="space-y-10 max-w-3xl ml-2">
+        
+        <!-- CV Mandiri Utama -->
+        <div class="timeline-item space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="text-xl font-bold text-slate-900">
+              CV MANDIRI UTAMA
+            </h3>
+            <span class="font-mono text-xs text-blue-600 dark:text-blue-400 font-bold bg-blue-50 dark:bg-blue-950/40 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-800">
+              2026 — Present
+            </span>
+          </div>
+          <p data-i18n="cvmu_role" class="font-mono text-xs font-semibold text-slate-600">
+            System Developer & Inventory Specialist
+          </p>
+          <p data-i18n="cvmu_desc" class="text-sm text-slate-600 leading-relaxed">
+            Building internal information systems using Python and FastAPI while working with operational inventory data, automating report workflows and data integrity pipelines.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="badge-pill">Python</span>
+            <span class="badge-pill">FastAPI</span>
+            <span class="badge-pill">Database</span>
+            <span class="badge-pill">Inventory Systems</span>
+          </div>
+        </div>
+
+        <!-- Unit Produksi RPL -->
+        <div class="timeline-item space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="text-xl font-bold text-slate-900">
+              Unit Produksi RPL — SMKS Taruna Bangsa
+            </h3>
+            <span class="font-mono text-xs text-slate-500 bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">
+              2025 — Present
+            </span>
+          </div>
+          <p data-i18n="rpl_role" class="font-mono text-xs font-semibold text-slate-600">
+            Developer / Member
+          </p>
+          <p data-i18n="rpl_desc" class="text-sm text-slate-600 leading-relaxed">
+            Practical software development, school technology infrastructure, team-based client projects, and real software delivery adhering to engineering standards.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="badge-pill">Team Collaboration</span>
+            <span class="badge-pill">Web Applications</span>
+            <span class="badge-pill">System Maintenance</span>
+          </div>
+        </div>
+
+        <!-- Cosmic Security -->
+        <div class="timeline-item space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="text-xl font-bold text-slate-900">
+              Cosmic Security
+            </h3>
+            <span class="font-mono text-xs text-slate-500 bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">
+              2026 — Present
+            </span>
+          </div>
+          <p data-i18n="cosmic_role" class="font-mono text-xs font-semibold text-slate-600">
+            Volunteer Staff / Community Contributor
+          </p>
+          <p data-i18n="cosmic_desc" class="text-sm text-slate-600 leading-relaxed">
+            Cybersecurity community involvement, technical discussions, exploring vulnerability assessments, OSINT tooling, and digital safety practices.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="badge-pill">Cybersecurity</span>
+            <span class="badge-pill">Community</span>
+            <span class="badge-pill">Security Research</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         ACHIEVEMENTS SECTION
+         ==================================================================== -->
+    <!-- ====================================================================
+         ACHIEVEMENTS SECTION (MILESTONES WITH DATES)
+         ==================================================================== -->
+    <section id="achievements" class="space-y-12">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="badge-pill">
+            <i data-lucide="trophy" class="w-3.5 h-3.5 text-amber-500"></i>
+            <span data-i18n="milestones_badge">MILESTONES_LOG</span>
+          </span>
+          <h2 data-i18n="milestones_heading" class="section-heading mt-3">
+            Some milestones along the way.
+          </h2>
+          <p data-i18n="milestones_sub" class="text-slate-500 text-sm mt-1">
+            Publicly verifiable competitive placements and technical honors with exact award dates.
+          </p>
+        </div>
+        <span data-i18n="milestones_count" class="font-mono text-xs text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700">
+          5 Public Milestones
+        </span>
+      </div>
+
+      <!-- Main Milestones Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Main Card: Hacktivate 2026 (Huge 03) -->
+        <div class="clean-card p-8 bg-gradient-to-br from-white via-amber-50/20 to-amber-100/30 dark:from-slate-900 dark:via-amber-950/20 dark:to-amber-900/10 border-amber-200 dark:border-amber-900/40 relative overflow-hidden flex flex-col justify-between group">
+          <div class="absolute -right-4 -bottom-8 text-9xl font-black font-mono text-amber-500/10 pointer-events-none select-none group-hover:scale-105 transition-transform">
+            03
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="text-2xl">🥉</span>
+                <span data-i18n="milestone_hack_badge" class="font-mono text-xs font-bold text-amber-800 dark:text-amber-300 uppercase tracking-wider">
+                  COMPETITION WINNER
+                </span>
+              </div>
+              <span data-i18n="milestone_hack_date" class="px-2.5 py-0.5 rounded-full font-mono text-xs font-bold bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-300 border border-amber-300 dark:border-amber-800">
+                Maret 2026
+              </span>
+            </div>
+            
+            <h3 data-i18n="milestone_hack_title" class="text-3xl font-extrabold text-slate-900">
+              3rd Place
+            </h3>
+            
+            <p class="text-lg font-bold text-amber-700 dark:text-amber-400 mt-1">
+              Hacktivate 2026
+            </p>
+
+            <p data-i18n-html="milestone_hack_desc" class="text-sm text-slate-600 mt-3 leading-relaxed max-w-md">
+              Awarded 3rd Place for developing <strong>AETERNA AI</strong>, an innovative AI-driven municipal waste forecasting platform designed to solve waste distribution problems in DKI Jakarta.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-amber-200/60 dark:border-amber-900/40 flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+            <span data-i18n="milestone_hack_org" class="text-amber-900 dark:text-amber-300 font-semibold">Penyelenggara: Kemenko Perekonomian & DLH DKI Jakarta</span>
+            <span class="text-amber-700 dark:text-amber-400">Aeterna AI Platform</span>
+          </div>
+        </div>
+
+        <!-- Second Card: AI Open Innovation Challenge 2026 -->
+        <div class="clean-card p-8 bg-gradient-to-br from-white via-blue-50/20 to-blue-100/30 dark:from-slate-900 dark:via-blue-950/20 dark:to-blue-900/10 border-blue-200 dark:border-blue-900/40 relative overflow-hidden flex flex-col justify-between group">
+          <div class="absolute -right-4 -bottom-8 text-9xl font-black font-mono text-blue-500/10 pointer-events-none select-none group-hover:scale-105 transition-transform">
+            FN
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="text-2xl">⭐</span>
+                <span data-i18n="milestone_ai_badge" class="font-mono text-xs font-bold text-blue-800 dark:text-blue-300 uppercase tracking-wider">
+                  NATIONAL STAGE
+                </span>
+              </div>
+              <span data-i18n="milestone_ai_date" class="px-2.5 py-0.5 rounded-full font-mono text-xs font-bold bg-blue-100 dark:bg-blue-950/60 text-blue-900 dark:text-blue-300 border border-blue-300 dark:border-blue-800">
+                Februari 2026
+              </span>
+            </div>
+            
+            <h3 data-i18n="milestone_ai_title" class="text-3xl font-extrabold text-slate-900">
+              Finalist (Top 3 Semifinal)
+            </h3>
+            
+            <p class="text-lg font-bold text-blue-700 dark:text-blue-400 mt-1">
+              AI Open Innovation Challenge 2026
+            </p>
+
+            <p data-i18n="milestone_ai_desc" class="text-sm text-slate-600 mt-3 leading-relaxed max-w-md">
+              Selected as a national finalist among competitive technical teams for proposing practical machine learning and time-series forecasting for urban environmental challenges.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-blue-200/60 dark:border-blue-900/40 flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+            <span data-i18n="milestone_ai_org" class="text-blue-900 dark:text-blue-300 font-semibold">Pemprov DKI Jakarta & President University</span>
+            <span class="text-blue-700 dark:text-blue-400">Chronos T5 Base Model</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Milestones Row -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        
+        <!-- Milestone 3: CodeLamp Scholarship -->
+        <div class="clean-card p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">🎓</span>
+              <span data-i18n="milestone_lamp_date" class="font-mono text-[11px] font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/50 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800">
+                April 2026
+              </span>
+            </div>
+            <h4 data-i18n="milestone_lamp_title" class="font-bold text-slate-900 text-sm">
+              Awardee Beasiswa Penuh 100%
+            </h4>
+            <p class="text-xs text-amber-700 dark:text-amber-400 font-mono font-semibold mt-1">
+              CodeLamp Indonesia (Skor 97.5)
+            </p>
+            <p data-i18n="milestone_lamp_desc" class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Program beasiswa penuh Mini Bootcamp Cyber Security bidang IT Auditor dengan kelulusan predikat sangat memuaskan.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-400">
+            No: 1376/CD/LC/IV/2026
+          </div>
+        </div>
+
+        <!-- Milestone 4: Stardev #2 HTML Dev Bekasi -->
+        <div class="clean-card p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">🚀</span>
+              <span data-i18n="milestone_star_date" class="font-mono text-[11px] font-bold text-rose-800 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/50 px-2 py-0.5 rounded border border-rose-200 dark:border-rose-800">
+                Oktober 2025 – 2026
+              </span>
+            </div>
+            <h4 data-i18n="milestone_star_title" class="font-bold text-slate-900 text-sm">
+              Top #2 HTML Developer in Bekasi
+            </h4>
+            <p class="text-xs text-rose-700 dark:text-rose-400 font-mono font-semibold mt-1">
+              Stardev Verified Index
+            </p>
+            <p data-i18n="milestone_star_desc" class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Peringkat ke-2 pengembang HTML teraktif dan terverifikasi di wilayah Kota/Kabupaten Bekasi berdasarkan indeks metrik repositori.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-400">
+            Indexed on stardev.io
+          </div>
+        </div>
+
+        <!-- Milestone 5: Medali Perak Informatika MTs Annajah -->
+        <div class="clean-card p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">🥈</span>
+              <span data-i18n="milestone_perak_date" class="font-mono text-[11px] font-bold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
+                Juli 2024
+              </span>
+            </div>
+            <h4 data-i18n="milestone_perak_title" class="font-bold text-slate-900 text-sm">
+              Medali Perak Bidang Informatika
+            </h4>
+            <p class="text-xs text-blue-700 dark:text-blue-400 font-mono font-semibold mt-1">
+              MTs Annajah (Tingkat Sekolah)
+            </p>
+            <p data-i18n="milestone_perak_desc" class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Meraih medali perak kompetisi komputasi dan logika informatika dasar sebelum memasuki jenjang SMK Rekayasa Perangkat Lunak.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-400">
+            Awal mula ketertarikan coding
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         CERTIFICATIONS SECTION (WITH REAL CERTIFICATE PREVIEWS)
+         ==================================================================== -->
+    <section id="certifications" class="space-y-10">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="badge-pill">
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-600"></i>
+            <span data-i18n="cert_badge">VERIFIED_CERTIFICATES</span>
+          </span>
+          <h2 data-i18n="cert_heading" class="section-heading mt-3">
+            Learning beyond school.
+          </h2>
+          <p data-i18n="cert_sub" class="text-slate-500 text-sm mt-1">
+            Resmi & terverifikasi dari lembaga industri (CodeLamp, Dicoding Google Partner, Kominfo).
+          </p>
+        </div>
+        <span data-i18n="cert_click_hint" class="font-mono text-xs text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-full font-semibold">
+          ● Klik gambar untuk memperbesar
+        </span>
+      </div>
+
+      <!-- Featured Visual Certificates Showcase -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- CERTIFICATE 1: CodeLamp IT Auditor (With Real Rendered Image) -->
+        <div class="clean-card p-6 sm:p-8 flex flex-col justify-between border-slate-200 group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span data-i18n="cert_lamp_badge" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-amber-50 dark:bg-amber-950/50 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                100% SCHOLARSHIP (SKOR 97.5)
+              </span>
+              <span class="font-mono text-xs text-slate-500 font-bold">April 2026</span>
+            </div>
+
+            <h3 data-i18n="cert_lamp_title" class="text-2xl font-bold text-slate-950">
+              Mini Bootcamp Cyber Security: IT Auditor
+            </h3>
+            
+            <p data-i18n-html="cert_lamp_desc" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Diterbitkan oleh <strong>CodeLamp Indonesia</strong> atas penyelesaian kurikulum audit kontrol umum teknologi informasi (ITGC), audit keamanan siber, dan penyusunan temuan audit metode 5C.
+            </p>
+
+            <!-- Certificate Image Preview (Clickable) -->
+            <div class="border-2 border-slate-900 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer" onclick="openCertModal('./assets/codelamp_certificate.png', 'Sertifikat Kompetensi Kelulusan CodeLamp - IT Auditor (Skor 97.5)')">
+              <img src="./assets/codelamp_certificate.png" alt="Sertifikat CodeLamp IT Auditor Faril Putra Pratama" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-mono text-xs font-bold gap-2">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                <span data-i18n="cert_zoom_btn">Klik untuk Memperbesar</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between text-xs font-mono text-slate-500 pt-1">
+              <span>No: <strong class="text-slate-800 dark:text-slate-200">1376/CD/LC/IV/2026</strong></span>
+              <span>Predikat: <strong class="text-emerald-600 dark:text-emerald-400">LULUS (97.5)</strong></span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-400">Verifikasi Resmi CodeLamp</span>
+            <button onclick="openCertModal('./assets/codelamp_certificate.png', 'Sertifikat Kompetensi Kelulusan CodeLamp - IT Auditor (Skor 97.5)')" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 font-bold flex items-center gap-1 cursor-pointer">
+              <span data-i18n="cert_lamp_detail">Lihat Detail Sertifikat</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 2: Dicoding Google Cloud Partner (With Real Rendered Image) -->
+        <div class="clean-card p-6 sm:p-8 flex flex-col justify-between border-slate-200 group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-blue-50 dark:bg-blue-950/50 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+                DICODING x GOOGLE CLOUD
+              </span>
+              <span class="font-mono text-xs text-slate-500 font-bold">25 September 2025</span>
+            </div>
+
+            <h3 data-i18n="cert_dicoding_title" class="text-2xl font-bold text-slate-950">
+              Belajar Dasar Artificial Intelligence (AI)
+            </h3>
+            
+            <p data-i18n-html="cert_dicoding_desc" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Diterbitkan oleh <strong>Dicoding Indonesia</strong> (Partner Resmi Google Cloud) atas kelulusan kompetensi dasar AI, pemahaman Machine Learning, Deep Learning, dan pemanfaatan data cerdas.
+            </p>
+
+            <!-- Certificate Image Preview (Clickable) -->
+            <div class="border-2 border-slate-900 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer" onclick="openCertModal('./assets/dicoding_ai_certificate.png', 'Sertifikat Kelulusan Belajar Dasar AI - Dicoding Indonesia x Google Cloud Partner')">
+              <img src="./assets/dicoding_ai_certificate.png" alt="Sertifikat Dicoding Belajar Dasar AI Faril Putra Pratama" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-mono text-xs font-bold gap-2">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                <span data-i18n="cert_zoom_btn">Klik untuk Memperbesar</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between text-xs font-mono text-slate-500 pt-1">
+              <span>ID: <strong class="text-slate-800 dark:text-slate-200">81P257G2NPOY</strong></span>
+              <span>Masa Berlaku: <strong class="text-blue-600 dark:text-blue-400">s/d 25 Sep 2028</strong></span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
+            <a href="https://dicoding.com/certificates/81P257G2NPOY" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 underline">
+              Verifikasi di dicoding.com ↗
+            </a>
+            <button onclick="openCertModal('./assets/dicoding_ai_certificate.png', 'Sertifikat Kelulusan Belajar Dasar AI - Dicoding Indonesia x Google Cloud Partner')" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 font-bold flex items-center gap-1 cursor-pointer">
+              <span data-i18n="cert_dicoding_modal">Buka Modal Fullscreen</span>
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Compact Competency Certifications -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+        
+        <div class="clean-card p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-mono font-bold text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/50 px-2 py-0.5 rounded border border-purple-200 dark:border-purple-800">
+                NETWORKING (NASIONAL)
+              </span>
+              <span class="font-mono text-[11px] text-slate-500 font-bold">Maret 2026</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-sm">
+              Fundamental of Associate Network Administrator
+            </h4>
+            <p class="text-xs text-slate-500 mt-1">Kementerian Komunikasi dan Digital RI (Digital Talent Academy)</p>
+            <p data-i18n="cert_net_desc" class="text-xs text-slate-500 mt-2">
+              Kompetensi konfigurasi jaringan komputer, subnetting IP, routing dasar, dan pemeliharaan perangkat jaringan.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-400">
+            Sertifikasi Nasional Kominfo
+          </div>
+        </div>
+
+        <div class="clean-card p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-mono font-bold text-cyan-700 dark:text-cyan-300 bg-cyan-50 dark:bg-cyan-950/50 px-2 py-0.5 rounded border border-cyan-200 dark:border-cyan-800">
+                FULLSTACK WEB
+              </span>
+              <span class="font-mono text-[11px] text-slate-500 font-bold">Februari 2026</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-sm">
+              Intermediate Assistant Web Developer
+            </h4>
+            <p class="text-xs text-slate-500 mt-1">Digital Talent Scholarship (Kominfo)</p>
+            <p data-i18n="cert_web_desc" class="text-xs text-slate-500 mt-2">
+              Pengembangan website tingkat menengah, manajemen state, integrasi basis data, dan arsitektur aplikasi web.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-400">
+            Digital Talent Scholarship
+          </div>
+        </div>
+
+        <div class="clean-card p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-mono font-bold text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/50 px-2 py-0.5 rounded border border-blue-200 dark:border-blue-800">
+                WEB DEV DASAR
+              </span>
+              <span class="font-mono text-[11px] text-slate-500 font-bold">2025</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-sm">
+              Fundamental Assistant Web Developer
+            </h4>
+            <p class="text-xs text-slate-500 mt-1">Digital Talent Academy (Kominfo)</p>
+            <p data-i18n="cert_fund_desc" class="text-xs text-slate-500 mt-2">
+              Struktur HTML semantik, CSS modern layout, manipulasi DOM JavaScript native, dan responsive web design.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-400">
+            Digital Talent Academy
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         TECH STACK (MY CURRENT TOOLBOX)
+         ==================================================================== -->
+    <section id="stack" class="space-y-12">
+      <div>
+        <span class="badge-pill">
+          <i data-lucide="layers" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span data-i18n="stack_badge">TECHNICAL_ARSENAL</span>
+        </span>
+        <h2 data-i18n="stack_heading" class="section-heading mt-3">
+          My current toolbox.
+        </h2>
+        <p data-i18n="stack_sub" class="text-slate-500 text-sm mt-1">
+          No fake progress bars or arbitrary percentages. Just technologies I actively use.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Category: Languages -->
+        <div class="space-y-3">
+          <h3 class="font-mono text-xs font-bold uppercase text-slate-400 tracking-wider">
+            &gt; LANGUAGES
+          </h3>
+          <div class="space-y-2">
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-blue-600 font-bold font-mono">Py</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">Python</div>
+                <div class="text-[11px] text-slate-500">Core language for backend, AI, and tooling</div>
+              </div>
+            </div>
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-amber-500 font-bold font-mono">JS</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">JavaScript</div>
+                <div class="text-[11px] text-slate-500">Interactive clients, browser apps & DOM APIs</div>
+              </div>
+            </div>
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-orange-500 font-bold font-mono">&lt;&gt;</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">HTML5 & CSS3</div>
+                <div class="text-[11px] text-slate-500">Semantic layouts, responsive styling & UI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Backend & Architecture -->
+        <div class="space-y-3">
+          <h3 class="font-mono text-xs font-bold uppercase text-slate-400 tracking-wider">
+            &gt; BACKEND & SERVERS
+          </h3>
+          <div class="space-y-2">
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-emerald-600 font-bold font-mono">FA</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">FastAPI</div>
+                <div class="text-[11px] text-slate-500">Async high-performance REST APIs</div>
+              </div>
+            </div>
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-slate-800 font-bold font-mono">Fl</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">Flask</div>
+                <div class="text-[11px] text-slate-500">Lightweight services & modular micro-apps</div>
+              </div>
+            </div>
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-blue-500 font-bold font-mono">API</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">REST API Design</div>
+                <div class="text-[11px] text-slate-500">Clean endpoint routing, authentication & schemas</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: AI, Data & Compilers -->
+        <div class="space-y-3">
+          <h3 class="font-mono text-xs font-bold uppercase text-slate-400 tracking-wider">
+            &gt; DATA, AI & COMPILERS
+          </h3>
+          <div class="space-y-2">
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-amber-600 font-bold font-mono">SK</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">Scikit-learn & Chronos</div>
+                <div class="text-[11px] text-slate-500">Time-series forecasting & ML regression</div>
+              </div>
+            </div>
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-blue-600 font-bold font-mono">Pd</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">Pandas & NumPy</div>
+                <div class="text-[11px] text-slate-500">Data analysis, cleaning & ETL automation</div>
+              </div>
+            </div>
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-purple-600 font-bold font-mono">PL</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">PLY (Lex-Yacc)</div>
+                <div class="text-[11px] text-slate-500">Lexical analysis, parsing & custom ASTs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Databases -->
+        <div class="space-y-3">
+          <h3 class="font-mono text-xs font-bold uppercase text-slate-400 tracking-wider">
+            &gt; DATABASES
+          </h3>
+          <div class="space-y-2">
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-blue-500 font-bold font-mono">SQL</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">MariaDB & MySQL</div>
+                <div class="text-[11px] text-slate-500">Relational schemas, queries & indexing</div>
+              </div>
+            </div>
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-emerald-500 font-bold font-mono">Mg</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">MongoDB</div>
+                <div class="text-[11px] text-slate-500">Document collections & flexible data models</div>
+              </div>
+            </div>
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-cyan-600 font-bold font-mono">Ti</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">TiDB & SQLite</div>
+                <div class="text-[11px] text-slate-500">Distributed SQL & embedded lightweight databases</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Frontend Styling -->
+        <div class="space-y-3">
+          <h3 class="font-mono text-xs font-bold uppercase text-slate-400 tracking-wider">
+            &gt; FRONTEND FRAMEWORKS
+          </h3>
+          <div class="space-y-2">
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-cyan-500 font-bold font-mono">TW</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">Tailwind CSS</div>
+                <div class="text-[11px] text-slate-500">Utility-first rapid responsive UI building</div>
+              </div>
+            </div>
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-purple-600 font-bold font-mono">BS</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">Bootstrap</div>
+                <div class="text-[11px] text-slate-500">Classic grid layouts & enterprise interfaces</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Workflow & Cloud -->
+        <div class="space-y-3">
+          <h3 class="font-mono text-xs font-bold uppercase text-slate-400 tracking-wider">
+            &gt; TOOLS & CLOUD
+          </h3>
+          <div class="space-y-2">
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-orange-600 font-bold font-mono">Git</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">Git & GitHub</div>
+                <div class="text-[11px] text-slate-500">Branching, pull requests & version control</div>
+              </div>
+            </div>
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-amber-500 font-bold font-mono">PM</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">Postman</div>
+                <div class="text-[11px] text-slate-500">API endpoint debugging & automated testing</div>
+              </div>
+            </div>
+            <div class="tech-card">
+              <div class="tech-icon-wrap text-blue-500 font-bold font-mono">GCP</div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">Vercel & Google Cloud</div>
+                <div class="text-[11px] text-slate-500">Serverless hosting, domain routing & deployments</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       PERSONAL PHILOSOPHY (FULL WIDTH SECTION)
+       ==================================================================== -->
+  <section class="philosophy-section py-24 sm:py-32 px-6">
+    <div class="max-w-6xl mx-auto space-y-6 text-center">
+      <h2 class="philosophy-title">
+        BUILD.<br>
+        BREAK.<br>
+        LEARN.<br>
+        REPEAT.
+      </h2>
+      <p data-i18n="philo_desc" class="text-base sm:text-xl text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed pt-4">
+        The best way I've found to understand technology is to build something with it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       MEMORABLE FOOTER
+       ==================================================================== -->
+  <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-20 px-6">
+    <div class="max-w-6xl mx-auto space-y-12">
+      
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 pb-12 border-b border-slate-100 dark:border-slate-800">
+        <div>
+          <h2 class="text-4xl sm:text-6xl font-black tracking-tighter text-slate-950">
+            FARIL<span class="text-blue-600">/</span>
+          </h2>
+          <div class="flex flex-wrap items-center gap-2 font-mono text-xs text-slate-500 mt-3">
+            <span data-i18n="footer_role1">Software Developer</span>
+            <span>·</span>
+            <span data-i18n="footer_role2">Student Builder</span>
+            <span>·</span>
+            <span data-i18n="footer_role3">AI Explorer</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 font-mono text-xs font-bold">
+          <a href="https://github.com/FARILtau72" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors">
+            GITHUB ↗
+          </a>
+          <a href="https://www.linkedin.com/in/faril-putra-pratama-81561a280" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
+            LINKEDIN ↗
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:text-rose-600 dark:text-slate-400 dark:hover:text-rose-400 transition-colors">
+            INSTAGRAM ↗
+          </a>
+          <a href="mailto:farilpratamap@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">
+            EMAIL ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-slate-400">
+        <p data-i18n="footer_built">Built with curiosity, code & probably too much debugging.</p>
+        <p>© 2026 Faril Putra Pratama · Bekasi, Indonesia</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       CERTIFICATE LIGHTBOX MODAL
+       ==================================================================== -->
+  <div id="cert-modal" class="fixed inset-0 z-[1200] bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4 sm:p-6 transition-all duration-300">
+    <div id="cert-modal-content" class="bg-white dark:bg-slate-900 rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col max-h-[92vh]">
+      <div id="cert-modal-header" class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900">
+        <div class="flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4 text-blue-600"></i>
+          <span id="cert-modal-title" data-i18n="cert_modal_viewer" class="font-bold text-sm text-slate-900 font-sans">Certificate Viewer</span>
+        </div>
+        <button onclick="closeCertModal()" class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors font-bold text-sm cursor-pointer">
+          ✕
+        </button>
+      </div>
+      <div class="p-4 overflow-auto flex items-center justify-center bg-slate-100 dark:bg-slate-950">
+        <img id="cert-modal-img" src="" alt="Certificate Preview" class="max-w-full max-h-[72vh] rounded-lg shadow border border-slate-300 dark:border-slate-700 object-contain">
+      </div>
+      <div class="p-3 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center text-xs font-mono text-slate-500">
+        <span data-i18n="cert_modal_verified">Faril Putra Pratama · Verified Credentials</span>
+        <button onclick="closeCertModal()" data-i18n="cert_modal_close" class="px-4 py-1.5 rounded-lg bg-slate-900 dark:bg-blue-600 text-white hover:bg-slate-800 dark:hover:bg-blue-500 transition-colors font-semibold cursor-pointer">
+          Tutup [ESC]
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       INTERACTIVE DOCKED CLI DRAWER ($ faril --cli)
+       ==================================================================== -->
+  <div id="cli-drawer">
+    <div class="cli-header">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+        <span class="font-bold text-slate-200">FARIL_CLI v2.6.0</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-[10px] text-slate-500">Press ESC or [X] to exit</span>
+        <button id="cli-close-btn" class="hover:text-white px-1 font-bold">[X]</button>
+      </div>
+    </div>
+
+    <div id="cli-output" class="cli-body">
+      <div class="text-slate-400 mb-2">Faril's Interactive Digital Terminal initialized.</div>
+      <div class="text-slate-400 mb-3">Type <span class="text-cyan-400 font-bold">"help"</span> to view available system commands.</div>
+    </div>
+
+    <div class="cli-input-row">
+      <span class="text-cyan-400 font-bold">$</span>
+      <input type="text" id="cli-input" placeholder="type a command (e.g. about, projects, skills, contact)..." autocomplete="off" spellcheck="false">
+    </div>
+  </div>
+
+  <!-- Floating Terminal Button (Trigger) -->
+  <button id="cli-trigger-btn" class="terminal-fab" title="Open Interactive CLI (Ctrl+/)">
+    <i data-lucide="terminal" class="w-4 h-4 text-cyan-400"></i>
+    <span>CLI</span>
+    <span class="hidden sm:inline text-[10px] opacity-60">Ctrl+/</span>
+  </button>
+
+  <!-- Lucide Icon Initialization -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Modular Clean Architecture Controllers -->
+  <script src="./js/theme.js"></script>
+  <script src="./js/i18n.js"></script>
+  <script src="./js/cursor.js"></script>
+  <script src="./js/navigation.js"></script>
+  <script src="./js/three-lazy.js"></script>
+  <script src="./js/simulators.js"></script>
+  <script src="./js/archive.js"></script>
+  <script src="./js/metrics.js"></script>
+  <script src="./js/cli.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/main.js"></script>
+
+</body>
+</html>
