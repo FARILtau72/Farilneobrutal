@@ -70,7 +70,7 @@ export class DeveloperOrb {
     this.scene = new THREE.Scene();
 
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
-    this.camera.position.z = 7;
+    this.camera.position.z = 6.0;
 
     this.renderer = new THREE.WebGLRenderer({
       alpha: true,
@@ -101,14 +101,17 @@ export class DeveloperOrb {
     this.scene.add(dirLight2);
 
     this.coreGroup = new THREE.Group();
+    // Default larger scale for bold presentation
+    const initialScale = this.isMobile ? 1.15 : 1.3;
+    this.coreGroup.scale.set(initialScale, initialScale, initialScale);
     this.scene.add(this.coreGroup);
   }
 
   createCore() {
     const THREE = this.THREE;
 
-    // Inner glowing sphere
-    const innerGeo = new THREE.IcosahedronGeometry(1.6, 2);
+    // Inner glowing sphere (enlarged)
+    const innerGeo = new THREE.IcosahedronGeometry(1.85, 2);
     const innerMat = new THREE.MeshPhongMaterial({
       color: 0x2563EB,
       wireframe: true,
@@ -319,23 +322,20 @@ export class DeveloperOrb {
 
   onScroll() {
     if (!this.coreGroup) return;
-    const scrollY = window.scrollY;
-    const maxScroll = 600;
-    const progress = Math.min(scrollY / maxScroll, 1);
-
-    // Gently shrink, rotate, and fade away
-    const scale = Math.max(0.2, 1 - progress * 0.75);
-    this.coreGroup.scale.set(scale, scale, scale);
-    this.coreGroup.position.y = progress * 1.5;
+    // Keep 3D orb large and consistent: do not shrink on scroll as requested
+    const baseScale = this.isMobile ? 1.15 : 1.3;
+    this.coreGroup.scale.set(baseScale, baseScale, baseScale);
+    this.coreGroup.position.y = 0;
     
+    // Ensure 3D canvas and portrait photo are always fully visible (never fade out on scroll/mobile)
     if (this.renderer && this.renderer.domElement) {
-      this.renderer.domElement.style.opacity = Math.max(0, 1 - progress * 1.2);
+      this.renderer.domElement.style.opacity = '1';
     }
 
     const photoContainer = document.querySelector('.hero-photo-container');
     if (photoContainer) {
-      photoContainer.style.opacity = Math.max(0, 1 - progress * 1.2);
-      photoContainer.style.transform = `scale(${Math.max(0.85, 1 - progress * 0.2)}) translateY(${progress * 24}px)`;
+      photoContainer.style.opacity = '1';
+      photoContainer.style.transform = 'none';
     }
   }
 
@@ -344,6 +344,11 @@ export class DeveloperOrb {
     const width = this.container.clientWidth;
     const height = this.container.clientHeight;
     this.isMobile = window.innerWidth < 768;
+
+    if (this.coreGroup) {
+      const baseScale = this.isMobile ? 1.15 : 1.3;
+      this.coreGroup.scale.set(baseScale, baseScale, baseScale);
+    }
 
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
