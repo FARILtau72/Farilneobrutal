@@ -1,9 +1,83 @@
 /**
  * Interactive Project Simulators:
- * - PyKasi (Bekasi Slang Language)
- * - QR Attendance System
- * - TV Slideshow RPL
+ * - Aeterna AI
+ * - PyKasi
+ * - QR Attendance
+ * - TV Slideshow
  */
+
+/* ==========================================================================
+   4. AETERNA AI INTERACTIVE PREDICTION SIMULATOR
+   ========================================================================== */
+function initAeternaSimulator() {
+  const districtSelect = document.getElementById('aeterna-district');
+  const tempSlider = document.getElementById('aeterna-temp');
+  const eventSelect = document.getElementById('aeterna-event');
+  
+  const metricVolume = document.getElementById('aeterna-metric-volume');
+  const metricTrucks = document.getElementById('aeterna-metric-trucks');
+  const metricConfidence = document.getElementById('aeterna-metric-confidence');
+  const barContainer = document.getElementById('aeterna-bar-chart');
+
+  if (!districtSelect || !tempSlider || !barContainer) return;
+
+  const districtBase = {
+    'Jakarta Pusat': 1420,
+    'Jakarta Selatan': 2180,
+    'Jakarta Barat': 1980,
+    'Jakarta Timur': 2350,
+    'Jakarta Utara': 1650
+  };
+
+  function updatePrediction() {
+    const dist = districtSelect.value || 'Jakarta Selatan';
+    const base = districtBase[dist] || 2000;
+    const tempVal = parseInt(tempSlider.value, 10);
+    const hasEvent = eventSelect.value === 'yes';
+
+    // Temp modifier + event surge calculation
+    const tempFactor = 1 + ((tempVal - 28) * 0.015);
+    const eventFactor = hasEvent ? 1.22 : 1.0;
+    const predictedTons = Math.round(base * tempFactor * eventFactor);
+    const trucksNeeded = Math.ceil(predictedTons / 12);
+    const confidence = (92.4 + (Math.random() * 2.5)).toFixed(1);
+
+    if (metricVolume) metricVolume.textContent = `${predictedTons.toLocaleString()} Tons`;
+    if (metricTrucks) metricTrucks.textContent = `${trucksNeeded} Units`;
+    if (metricConfidence) metricConfidence.textContent = `${confidence}%`;
+
+    // Render bar chart for 7-day forecast
+    barContainer.innerHTML = '';
+    const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    days.forEach((day, idx) => {
+      const variation = 1 + ((Math.sin(idx + tempVal * 0.2)) * 0.15);
+      const dayTons = Math.round(predictedTons * variation);
+      const heightPercent = Math.min(100, Math.max(20, (dayTons / (base * 1.5)) * 100));
+
+      const barWrap = document.createElement('div');
+      barWrap.className = 'flex flex-col items-center flex-1 gap-2';
+      barWrap.innerHTML = `
+        <div class="w-full bg-slate-100 rounded-t h-28 flex items-end justify-center p-1 relative group">
+          <div class="w-full rounded bg-blue-600 group-hover:bg-cyan-500 transition-all duration-300" style="height: ${heightPercent}%;"></div>
+          <span class="absolute -top-7 text-[10px] font-mono bg-slate-900 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+            ${dayTons}T
+          </span>
+        </div>
+        <span class="text-[11px] font-mono text-slate-500">${day}</span>
+      `;
+      barContainer.appendChild(barWrap);
+    });
+  }
+
+  districtSelect.addEventListener('change', updatePrediction);
+  tempSlider.addEventListener('input', () => {
+    document.getElementById('aeterna-temp-val').textContent = `${tempSlider.value}°C`;
+    updatePrediction();
+  });
+  eventSelect.addEventListener('change', updatePrediction);
+
+  updatePrediction();
+}
 
 /* ==========================================================================
    5. PYKASI SYNTAX SIMULATOR (Bekasi Slang Language)
