@@ -64,33 +64,34 @@ Focus: Python, Backend Engineering, AI & Smart Systems.`);
 
         case 'projects':
           appendOutput(`Featured Work:
-1. AETERNA AI   - Waste Generation Forecasting (Chronos T5, FastAPI)
-2. PyKasi       - Bekasi Slang Language (Python PLY Lexer/Parser)
-3. QR Attendance- Student Management & QR Scanner (Flask, TiDB)
-4. TV Slideshow - Digital Signage for SMKS Taruna Bangsa`);
+1. PyKasi          - Bekasi Slang Language (Python PLY Lexer/Parser)
+2. TV Slideshow RPL- Digital Signage for SMKS Taruna Bangsa
+3. EyeD 2.0        - Face Recognition Attendance System (Face-API)
+4. Known 1.0       - OSINT & Digital Footprint Investigation Tool
+5. QR Attendance   - Fast Student Attendance Scanner (FARILtau72/Qrcode)`);
           break;
 
         case 'skills':
           appendOutput(`Languages : Python, JavaScript, HTML, CSS
-Backend   : FastAPI, Flask, REST APIs
-AI / Data : Scikit-learn, Pandas, Machine Learning
-Databases : MariaDB, MongoDB, TiDB, MySQL, SQLite
-Tools     : Git, GitHub, Postman, Vercel, Google Cloud`);
+Backend   : FastAPI, Flask, REST APIs, PLY Lex-Yacc
+Tools     : Git, GitHub, Linux, Postman, Vercel
+Databases : MySQL, SQLite, MongoDB
+Focus     : Backend Architecture, AI Fundamentals, Cyber Security & OSINT`);
           break;
 
         case 'experience':
           appendOutput(`Experience Timeline:
-- CV Mandiri Utama : System Developer & Inventory Specialist (2026-Present)
-- Unit Produksi RPL: Developer / Member @ SMKS Taruna Bangsa (2025-Present)
+- NXCTF            : Python Developer (2026-Present)
+- Unit Produksi RPL: Developer / Elite Member @ SMKS Taruna Bangsa (2025-Present)
 - Cosmic Security  : Volunteer Staff / Community Contributor (2026-Present)`);
           break;
 
         case 'awards':
-          appendOutput(`Verified Honors:
-- 🥉 3rd Place - Hacktivate 2026 (AETERNA AI)
-- Finalist - AI Open Innovation Challenge 2026
-- Top #2 HTML Developer in Bekasi (Stardev)
-- 100% Scholarship Recipient @ CodeLamp (Score 97.5)`);
+          appendOutput(`Verified Honors & Certifications:
+- 100% Full Scholarship @ CodeLamp (Mini Bootcamp Cyber Security: IT Auditor, Score: 93.45 / 100, MASTERED)
+- Top #2 HTML Developer in Bekasi (Stardev.io Verified Index)
+- Dicoding Indonesia x Google Cloud Partner: Belajar Dasar AI (ID: 81P257G2NPOY)
+- Creator of PyKasi Programming Language (FARILtau72/pykasi)`);
           break;
 
         case 'contact':

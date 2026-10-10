@@ -7,7 +7,7 @@
  *  - cursor.js       : Custom Desktop Precision Cursor
  *  - navigation.js   : Scroll Spy & Navbar Microinteractions
  *  - three-lazy.js   : Three.js Interactive 3D Canvas Loader
- *  - simulators.js   : Aeterna AI, PyKasi, QR Attendance, TV Slideshow
+ *  - simulators.js   : PyKasi, QR Attendance, TV Slideshow
  *  - archive.js      : Real GitHub Repositories (64 Repos) Filter & Search
  *  - metrics.js      : Developer Activity Matrix & GitHub Graph
  *  - cli.js          : Interactive Embedded Terminal ($ faril --cli)
@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Interactive Simulators & Dynamic Content
   if (typeof initThreeCoreLazy === 'function') initThreeCoreLazy();
-  if (typeof initAeternaSimulator === 'function') initAeternaSimulator();
   if (typeof initPykasiSimulator === 'function') initPykasiSimulator();
   if (typeof initQrAttendanceSimulator === 'function') initQrAttendanceSimulator();
   if (typeof initTvSlideshowSimulator === 'function') initTvSlideshowSimulator();
