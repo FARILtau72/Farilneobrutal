@@ -87,7 +87,7 @@ Tools     : Git, GitHub, Postman, Vercel, Google Cloud`);
 
         case 'awards':
           appendOutput(`Verified Honors:
-- 🥉 3rd Place - Hacktivate 2026 (AETERNA AI - Kemenko Perekonomian & DLH DKI)
+- 🥉 3rd Place - Hacktivate 2026 (AETERNA AI - Kalla Institute)
 - 🥈 Silver Medal - Informatics Computing 2024 (MTs Annajah)
 - Finalist - AI Open Innovation Challenge 2026 (Pemprov DKI & PresUniv)
 - Top #2 HTML Developer in Bekasi (Stardev Verified Index)
