@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#22D3EE" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base with Rounded Corner -->
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#bg-grad)" stroke="#1E293B" stroke-width="8" />
+
+  <!-- Accent Border Glow -->
+  <rect x="28" y="28" width="456" height="456" rx="108" fill="none" stroke="url(#accent-grad)" stroke-width="6" opacity="0.85" />
+
+  <!-- Code Bracket Left < -->
+  <path d="M168 180 L108 256 L168 332" fill="none" stroke="#64748B" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+
+  <!-- Code Bracket Right > -->
+  <path d="M344 180 L404 256 L344 332" fill="none" stroke="#64748B" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+
+  <!-- Center 'F' Monogram -->
+  <!-- Vertical Stem -->
+  <path d="M212 164 L212 348" stroke="url(#accent-grad)" stroke-width="38" stroke-linecap="round" />
+  
+  <!-- Top Bar -->
+  <path d="M212 164 L308 164" stroke="url(#accent-grad)" stroke-width="38" stroke-linecap="round" />
+  
+  <!-- Middle Bar -->
+  <path d="M212 248 L284 248" stroke="url(#accent-grad)" stroke-width="34" stroke-linecap="round" />
+
+  <!-- Futuristic Slash Terminal Slash / Accent Dot -->
+  <circle cx="316" cy="336" r="18" fill="#22D3EE" filter="url(#glow)" />
+</svg>

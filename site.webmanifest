@@ -1,0 +1,22 @@
+{
+  "name": "Faril Putra Pratama · Software Developer & AI Explorer",
+  "short_name": "FarilDev",
+  "description": "Portfolio of Faril Putra Pratama (FARILtau72) — Software Developer, Backend Builder, and AI Explorer based in Bekasi, Indonesia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#2563EB",
+  "icons": [
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/my.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
